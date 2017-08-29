@@ -190,7 +190,7 @@ def generateInsertSML(sensor){
     </swes:metadata>
 </swes:InsertSensor>'''
 
-    def fullXMLBody = beginningXML + removeSpaces(sensor.getLabel()) + endingXML
+    def fullXMLBody = beginningXML + sensor.getId() + endingXML
     log.info fullXMLBody
     return fullXMLBody
 }
